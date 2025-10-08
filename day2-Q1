@@ -1,0 +1,29 @@
+//1.Write a Java program to calculate the electricity bill based on the following rules:
+Units	Rate per unit
+0 – 100	₹5
+101 – 300	₹7
+Above 300	₹10
+If total bill > ₹2000, add 10% surcharge.//
+
+import java.util.Scanner;
+class Main {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.print("enter total units used ");
+int units = sc.nextInt();
+double bill = 0;
+if (units <= 100) {
+bill = units * 5;
+} 
+else if (units <= 300) {
+bill = 100 * 5 + (units 100) * 7;
+} 
+else {
+bill = 100 * 10 + 200 * 7 + (units 100) * 10;
+}
+if (bill > 2000) {
+bill = bill + bill *0.10;
+}
+System.out.print("Total bill amount : + bill);
+}
+}
